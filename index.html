@@ -13,13 +13,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <span style="color: rgb(1, 199, 239); font-size: 1.5rem"
-          >ARIZ ARSHAL</span
-        >
-        <h1>Self-taught Web Developer</h1>
-        <p>
-          I build websites with a focus on responsive design and accessibility.
-        </p>
+        <span style="color: rgb(1, 199, 239); font-size: 1.5rem">ARIZ ARSHAL</span>
+        <h1 class="typewriter">Web developer and tech entusiast</h1>
+        <p>I build websites with a focus on responsive design and accessibility</p>
       </div>
       <a href="#projects" class="scroll-btn">
         <span>scroll</span>
@@ -31,7 +27,11 @@
     <header>
       <nav>
         <div class="logo">Portfolio</div>
-        <ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </div>
+        <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -57,7 +57,7 @@
             <img src="static/chatakk.png" alt="Delivery Website" />
             <div class="project-card-content">
               <h3>Chatakk Delivery</h3>
-              <p>A Delivery website wirh Google Maps API booking system</p>
+              <p>A Delivery website with Google Maps API booking system</p>
               <div class="tech-stack">
                 <span>JavaScript</span>
                 <span>NodeJs</span>
@@ -169,7 +169,24 @@
           <span class="phone-number">+91 90738 87008</span>
         </div>
       </div>
-      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      <p>&copy; 2025 My Portfolio. All rights reserved.</p>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+    
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+    
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+          });
+        });
+      </script>
   </body>
 </html>
