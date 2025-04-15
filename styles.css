@@ -158,7 +158,7 @@ nav ul li a:hover {
 }
 
 .hero h1::after {
-  content: 'Web developer and tech entusiast';
+  content: 'Web developer and tech enthusiast';
   position: absolute;
   left: 2px;
   top: 2px;
