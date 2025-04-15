@@ -484,7 +484,6 @@ footer h3 {
 }
 
 
-/* Add these new styles */
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -495,6 +494,41 @@ footer h3 {
 .menu-toggle .fa-times {
   display: none;
 }
+
+/* telegram type blur in phone number */
+.telegram-blur {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 100%;
+  /* background: rgb(228, 19, 118); */
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  border-radius: 0.8rem;
+  background: linear-gradient(-45deg, rgb(1, 199, 239) 40%, rgb(228, 19, 118), rgb(1, 199, 239) 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: 0%
+  }
+}
+
+.blur-toggle:checked~.blur-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 /* Update media query */
 @media screen and (max-width: 768px) {
@@ -524,4 +558,44 @@ footer h3 {
     display: block;
     color: rgb(228, 19, 118);
   }
+}
+
+.image-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 27, 55, 0.95);
+  z-index: 1001;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-popup.active {
+  display: flex;
+}
+
+.image-popup img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(1, 199, 239, 0.3);
+}
+
+.close-popup {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: rgb(228, 19, 118);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-popup:hover {
+  color: rgb(1, 199, 239);
+  transform: scale(1.1);
 }

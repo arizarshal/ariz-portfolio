@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Blog - Ariz Arshal</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="blog.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -23,28 +24,180 @@
           <li><a href="index.html#projects">Projects</a></li>
           <li><a href="index.html#skills">Skills</a></li>
           <li><a href="blog.html" class="blog-btn active">Blog</a></li>
-          <li><a href="static/ArizArshal_CV.pdf" download class="cv-btn">
-            <i class="fas fa-download"></i> Download CV
-          </a></li>
+          <!-- <li>
+            <a href="static/ArizArshal_CV.pdf" download class="cv-btn">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </li> -->
         </ul>
       </nav>
     </header>
 
+    <!-- Blog Navigation -->
+    <nav class="blog-nav">
+      <div class="blog-nav-links">
+        <a href="#" class="active">LATEST</a>
+        <a href="#">TRENDING</a>
+        <a href="#">NEWSLETTER</a>
+      </div>
+      <div class="blog-social">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <button
+          class="follow-btn"
+          onclick="location.href='https://instagram.com/ariz_marshall'">
+          Follow
+        </button>
+      </div>
+    </nav>
+
     <!-- Blog Content -->
     <main class="blog-container">
-      <h1>My Blog</h1>
-      <div class="blog-grid">
-        <article class="blog-card">
-          <img src="static/blog-1.jpg" alt="Blog Post 1">
-          <div class="blog-content">
-            <h2>Getting Started with Web Development</h2>
-            <p class="blog-date">January 15, 2024</p>
-            <p>My journey into web development and the lessons learned along the way...</p>
-            <a href="#" class="read-more">Read More →</a>
+      <!-- Latest Blog Preview Section -->
+      <section class="featured-blog">
+        <!-- First Blog Preview -->
+        <div class="blog-hero">
+          <img
+            src="static/the-last--supper.jpeg"
+            alt="Featured Blog"
+            class="featured-image" />
+          <div class="blog-preview">
+            <h1>Yes to a diverse community</h1>
+            <p>
+              In pursuit of a deeper understanding of the world through shared
+              stories. We believe in fostering an environment where different
+              perspectives can thrive and grow together...
+            </p>
+            <div class="author-details">
+              <img
+                src="static/ariz-profile-pic.jpg"
+                alt="Ariz Arshal"
+                class="author-avatar" />
+              <div class="post-info">
+                <div class="author-line">
+                  <span class="author-name">Ariz Arshal</span>
+                  <span class="publish-in">in</span>
+                  <span class="publication">The Medium Blog</span>
+                </div>
+                <div class="post-meta">
+                  <span>Apr 14</span>
+                  <span>·</span>
+                  <span>5 min read</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
-        <!-- Add more blog posts as needed -->
-      </div>
+        </div>
+
+        <!-- Second Blog Preview -->
+        <div class="blog-hero">
+          <img
+            src="static/the-last--supper.jpeg"
+            alt="Featured Blog"
+            class="featured-image" />
+          <div class="blog-preview">
+            <h1>Building Modern Web Applications</h1>
+            <p>
+              Exploring the latest technologies and best practices in web
+              development. From responsive design to progressive web apps,
+              discover how to create engaging user experiences...
+            </p>
+            <div class="author-details">
+              <img
+                src="static/ariz-profile-pic.jpg"
+                alt="Ariz Arshal"
+                class="author-avatar" />
+              <div class="post-info">
+                <div class="author-line">
+                  <span class="author-name">Ariz Arshal</span>
+                  <span class="publish-in">in</span>
+                  <span class="publication">The Medium Blog</span>
+                </div>
+                <div class="post-meta">
+                  <span>Apr 16</span>
+                  <span>·</span>
+                  <span>7 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sidebar Recent Posts -->
+      <aside class="recent-posts">
+        <h2>Recent Stories</h2>
+        <!-- First Recent Post -->
+        <div class="recent-post-card">
+          <img
+            src="static/the-last--supper.jpeg"
+            alt="Recent Post"
+            class="recent-post-image" />
+          <div class="recent-post-content">
+            <h3>Building Scalable Web Applications</h3>
+            <p>
+              Exploring modern approaches to web development and best practices
+              for creating maintainable applications...
+            </p>
+            <span class="read-time">7 min read</span>
+          </div>
+        </div>
+
+        <!-- Second Recent Post -->
+        <div class="recent-post-card">
+          <img
+            src="static/the-last--supper.jpeg"
+            alt="Recent Post"
+            class="recent-post-image" />
+          <div class="recent-post-content">
+            <h3>Getting Started with Node.js</h3>
+            <p>
+              A beginner's guide to server-side JavaScript and building robust
+              backend services...
+            </p>
+            <span class="read-time">5 min read</span>
+          </div>
+        </div>
+
+        <!-- Third Recent Post -->
+        <div class="recent-post-card">
+          <img
+            src="static/the-last--supper.jpeg"
+            alt="Recent Post"
+            class="recent-post-image" />
+          <div class="recent-post-content">
+            <h3>Mastering CSS Grid Layout</h3>
+            <p>
+              Deep dive into modern CSS layouts and how to create responsive web
+              designs efficiently...
+            </p>
+            <span class="read-time">6 min read</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Most Visited Section -->
+      <section class="most-visited">
+        <h2>Most Visited</h2>
+        <div class="popular-post">
+          <div class="popular-content">
+            <h3>Understanding React Hooks</h3>
+            <p>
+              A comprehensive guide to React Hooks and how they revolutionize
+              state management in modern web applications...
+            </p>
+            <div class="post-stats">
+              <span class="views"><i class="fas fa-eye"></i> 15.2K views</span>
+              <span class="read-duration">10 min read</span>
+            </div>
+          </div>
+          <img
+            src="static/the-last--supper.jpeg"
+            alt="Popular Post"
+            class="popular-image" />
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -59,29 +212,30 @@
         <a href="https://instagram.com/ariz_marshall" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
-        <div class="phone-container">
-          <i class="fas fa-phone"></i>
-          <span class="phone-number">+91 90738 87008</span>
-        </div>
+        <label class="telegram-blur">
+          <input type="checkbox" class="blur-toggle" hidden />
+          <span class="blur-content">+91 90738 87008</span>
+          <span class="blur-overlay"></span>
+        </label>
       </div>
       <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
+
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-    
-        menuToggle.addEventListener('click', () => {
-          menuToggle.classList.toggle('active');
-          navLinks.classList.toggle('active');
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
+          navLinks.classList.remove("active");
         });
-    
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-          link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-          });
-        });
-      </script>
+      });
+    </script>
   </body>
 </html>

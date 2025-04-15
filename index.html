@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Ariz Arshal</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -134,7 +134,45 @@
               </div>
             </div>
           </div>
-    </section>
+
+     <!-- Fifth Card -->
+     <div class="project-card">
+      <img src="static/Fullstack.png" alt="Full Stack Web Development Certificate" />
+      <div class="project-card-content">
+        <h3>Full Stack Web Dev. Certificate</h3>
+        <p>Full stack web project</p>
+        <div class="tech-stack">
+          <span>HTML5</span>
+          <span>CSS</span>
+          <span>Javascript</span>
+          <span>NodeJS</span>
+          <span>MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="view-certificate" data-img="static/Fullstack.png">View</a>
+        </div>
+      </div>
+    </div>
+
+ <!-- Sixth Card -->
+ <div class="project-card">
+  <img src="static/Networking.png" alt="Networking Certificate" />
+  <div class="project-card-content">
+    <h3>Networking and Cloud (Basics)</h3>
+    <p>Theory and working principles of Cloud and Networking</p>
+    <div class="tech-stack">
+      <span>Cloud Fundamentals</span>
+      <span>Virtualization</span>
+      <span>SDN</span>
+      <span>Openstack</span>
+      <span>Kubernetes</span>
+    </div>
+    <div class="project-links">
+      <a href="#" class="view-certificate" data-img="static/Networking.png">View</a>
+    </div>
+  </div>
+</div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -164,13 +202,27 @@
         <a href="https://instagram.com/ariz_marshall" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
-        <div class="phone-container">
-          <i class="fas fa-phone"></i>
-          <span class="phone-number">+91 90738 87008</span>
-        </div>
+        <!-- <div class="phone-container"> -->
+          <label class="telegram-blur">
+            <input type="checkbox" class="blur-toggle" hidden>
+            <span class="blur-content">+91 90738 87008</span>
+            <span class="blur-overlay"></span>
+          </label>
+
+
+          <!-- <i class="fas fa-phone"></i>
+          <span class="phone-number">+91 90738 87008</span> -->
+        <!-- </div> -->
       </div>
-      <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+      <p>&copy; 2025 | Ariz Portfolio | All rights reserved</p>
     </footer>
+
+    <!-- Add this popup container -->
+    <div class="image-popup" id="imagePopup">
+      <span class="close-popup">&times;</span>
+      <img src="" alt="Certificate" id="popupImage">
+    </div>
+
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
@@ -190,3 +242,31 @@
       </script>
   </body>
 </html>
+
+<script>
+  const imagePopup = document.getElementById('imagePopup');
+  const popupImage = document.getElementById('popupImage');
+  const closePopup = document.querySelector('.close-popup');
+
+  document.querySelectorAll('.view-certificate').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const imgSrc = button.getAttribute('data-img');
+      popupImage.src = imgSrc;
+      imagePopup.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closePopup.addEventListener('click', () => {
+    imagePopup.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  imagePopup.addEventListener('click', (e) => {
+    if (e.target === imagePopup) {
+      imagePopup.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>
